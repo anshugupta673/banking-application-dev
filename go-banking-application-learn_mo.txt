@@ -1,0 +1,15 @@
+go-banking-application (api-dev, hexagonal-architecture, dependency-inversion-in-go, jwt-token, microservice-OAuth, unit-testing(mocks and state based tests))
+1. open/close account
+2. deposit or withdrawal transaction
+3. role based access control
+4. ...
+
+learn-obj:
+1. http-server(working mechanism)
+2. handler-functions and request multiplexer(router)
+3. request and response headers
+4. marshelling data structures to json and xml rep
+
+1. http-web-server:
+	In the crux of a http-server lies a multiplexer(responsible to match all the registered routes and then it passes the control to the appropiate handler-fucntion). http-request -> multiplexer (matches the routes and transfers control to the appropiate handler/routes).
+
