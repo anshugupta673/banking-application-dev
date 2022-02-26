@@ -1,0 +1,15 @@
+# hexagonal architecture(ports and adapter design, is an architectural pattern that guides in structuring the application and managing dependencies): 
+1. puts the domain-logic in the middle, allows to isolate the core business-logic of an application so that it's behaviour can be tested independent of everything else.
+2. explicitly seperate the code base in three large areas:
+	a) user-side: how users and external programs will interact with the application e.g. the user interface code or the http-routes
+	b) business-side at the center isolated from both left and right
+	c) third part is server-side this part contains the essential infrastructure details such as the code that interacts with our database or to our mocks or to the calls to the fileystsem or to external web-service.
+	d) dependencies go inside (rule is the one who is trigerring has to know the dependency like user -> business-logic -> server-side) so
+		d.1) business-logic do not depends on the user side but the vice-versa is true
+		d.2) and goes on...
+	e) lastly the boundries are isolated with the interfaces e.g. ports are defined at the boundary(to achieve loose coupling) of the business logic in which all kinds of adapters can be interchangebally connected if they follow the specification defined by the port, so the port is nothing but the interface defining the contracts for communication.
+e.g. refer .io diag...
+
+Mod-1:
+1. Structure the application according to the architecture.
+2. 
